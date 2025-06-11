@@ -12,13 +12,12 @@ class BaseDatos:
     def crear_tabla(self):
         cursor = self.conexion.cursor()
         cursor.execute('''
-            CREATE TABLE IF NO EXISTS vehiculos (
+            CREATE TABLE IF NOT EXISTS vehiculos (
                        id INTEGER PRIMARY KEY AUTOINCREMENT,
                        marca TEXT NOT NULL,
                        modelo TEXT NOT NULL,
-                       anio INTEGER NOT NULL
-            )            
-        ;''')
+                       anio INTEGER NOT NULL);           
+        ''')
         self.conexion.commit()
 
     def insertar_vehiculo(self, vehiculo):

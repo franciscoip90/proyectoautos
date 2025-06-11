@@ -34,7 +34,7 @@ def main():
             id_v = int(input("ID Vehiculo: "))
             v = bd.buscar_vehiculo(id_v)
             if v:
-                print("ID: {v[0]}, Marca: {v[1]}, Modelo: {v[2]}, Año: {v[3]}")
+                print(f"ID: {v[0]}, Marca: {v[1]}, Modelo: {v[2]}, Año: {v[3]}")
             else:
                 print("Vehiculo no encontrado. ")
 

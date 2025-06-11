@@ -37,7 +37,7 @@ class BaseDatos:
     
     def eliminar_vehiculo(self, id_vehiculo):
         cursor = self.conexion.cursor()
-        cursor.execute("DELETE FROM vehiculos WHERE id = ?", (id_vehiculo))
+        cursor.execute("DELETE FROM vehiculos WHERE id = ?", (id_vehiculo,))
         self.conexion.commit()
 
     

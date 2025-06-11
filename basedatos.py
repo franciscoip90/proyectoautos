@@ -18,7 +18,7 @@ class BaseDatos:
                        modelo TEXT NOT NULL,
                        anio INTEGER NOT NULL
             )            
-        ''')
+        ;''')
         self.conexion.commit()
 
     def insertar_vehiculo(self, vehiculo):
@@ -40,7 +40,7 @@ class BaseDatos:
         cursor = self.conexion.cursor()
         cursor.execute("DELETE FROM vehiculos WHERE id = ?", (id_vehiculo))
         self.conexion.commit()
-        
+
     
 
 

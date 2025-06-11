@@ -45,6 +45,7 @@ def main():
 
         elif opcion == "5":
             print("saliendo del programa.")
+            bd.cerrar()
             break
 
         else:

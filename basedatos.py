@@ -40,6 +40,15 @@ class BaseDatos:
         cursor.execute("DELETE FROM vehiculos WHERE id = ?", (id_vehiculo,))
         self.conexion.commit()
 
+    def cerrar(self):
+        if self.conexion:
+            self.conexion.close()
+
+    def actualizar_vehiculo(self, id, nueva_marca, nuevo_modelo, nuevo_anio):
+        cursor = self.conexion.cursor()
+        cursor.execute("UPDATE vehiculos SET marca=?, modelo=?, anio=? WHERE id=?",(nueva_marca, nuevo_modelo, nuevo_anio))
+        self.conexion.commit()
+
     
 
 

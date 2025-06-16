@@ -46,7 +46,7 @@ class BaseDatos:
 
     def actualizar_vehiculo(self, id, nueva_marca, nuevo_modelo, nuevo_anio):
         cursor = self.conexion.cursor()
-        cursor.execute("UPDATE vehiculos SET marca=?, modelo=?, anio=? WHERE id=?",(nueva_marca, nuevo_modelo, nuevo_anio))
+        cursor.execute("UPDATE vehiculos SET marca=?, modelo=?, anio=? WHERE id=?",(nueva_marca, nuevo_modelo, nuevo_anio, id))
         self.conexion.commit()
 
 

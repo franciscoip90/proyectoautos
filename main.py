@@ -8,8 +8,8 @@ def mostrar_menu():
     print("3. Buscar Vehiculo")
     print("4. Eliminar Vehiculo")
     print("5. Actualizar Vehiculo")
-    print("6. Exportar a CSV")
-    print("6. Salir")
+    print("6. Exportar a CSV ")
+    print("7. Salir")
 
 def main():
     bd = BaseDatos()

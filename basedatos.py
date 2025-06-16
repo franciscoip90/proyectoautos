@@ -49,6 +49,7 @@ class BaseDatos:
         cursor.execute("UPDATE vehiculos SET marca=?, modelo=?, anio=? WHERE id=?",(nueva_marca, nuevo_modelo, nuevo_anio))
         self.conexion.commit()
 
+
     
 
 

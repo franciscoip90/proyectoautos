@@ -8,8 +8,11 @@ def mostrar_menu():
     print("3. Buscar Vehiculo")
     print("4. Eliminar Vehiculo")
     print("5. Actualizar Vehiculo")
-    print("6. Exportar a CSV ")
-    print("7. Salir")
+    print("6. Exportar a CSV Fabio")
+    print("7. Exportar a CSV Kevin")
+    print("8. Exportar a CSV Daniel")
+    print("9. Exportar a CSV Yerco")
+    print("0. Salir")
 
 def main():
     bd = BaseDatos()
@@ -55,9 +58,11 @@ def main():
                 bd.actualizar_vehiculo(vehiculo_id, nueva_marca, nuevo_modelo, nuevo_anio) 
             except ValueError:
                 print("datos invalidos, ingrese el id correcto")
+        
 
 
-        elif opcion == "6":
+
+        elif opcion == "0":
             print("saliendo del programa.")
             bd.cerrar()
             break

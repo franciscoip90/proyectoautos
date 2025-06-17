@@ -1,4 +1,5 @@
 import sqlite3
+import csv
 
 class BaseDatos:
     def __init__(self, nombre_bd="vehiculos.db"):
@@ -48,6 +49,13 @@ class BaseDatos:
         cursor = self.conexion.cursor()
         cursor.execute("UPDATE vehiculos SET marca=?, modelo=?, anio=? WHERE id=?",(nueva_marca, nuevo_modelo, nuevo_anio, id))
         self.conexion.commit()
+
+    def exportar_csv(self, nombre_archivo="vehiculos.csv"):
+        vehiculos = self.listar_vehiculos()
+        with open (nombre_archivo, "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(["ID", "Marca", "Modelo", "Año"])
+            writer.writerows(vehiculos)
 
 
     
